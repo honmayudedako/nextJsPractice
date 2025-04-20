@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import supabase from "@/app/utils/database"
 
 
-export async function PUT(request){
+export async function POST(request){
     const reqBody = await request.json()
     try{
         const {error} = await supabase.from("users").insert(reqBody)
